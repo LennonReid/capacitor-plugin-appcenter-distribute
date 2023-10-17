@@ -1,22 +1,17 @@
-import { WebPlugin } from '@capacitor/core';
+import { registerPlugin } from '@capacitor/core';
 import { AppCenterDistributePlugin } from './definitions';
 
-export class AppCenterDistributeWeb extends WebPlugin implements AppCenterDistributePlugin {
-  constructor() {
-    super({
-      name: 'AppCenterDistribute',
-      platforms: ['web'],
-    });
-  }
 
+export class AppCenterDistributeWeb implements AppCenterDistributePlugin {
   async checkForUpdate(): Promise<void> {
     console.log('Checking for updates');
   }
 }
 
-const AppCenterDistribute = new AppCenterDistributeWeb();
+const AppCenterDistributeWebInstance: any = new AppCenterDistributeWeb();
 
-export { AppCenterDistribute };
+export { AppCenterDistributeWebInstance as AppCenterDistribute };
 
-import { registerWebPlugin } from '@capacitor/core';
-registerWebPlugin(AppCenterDistribute);
+registerPlugin('AppCenterDistribute', {
+  web: () => AppCenterDistributeWebInstance,
+});

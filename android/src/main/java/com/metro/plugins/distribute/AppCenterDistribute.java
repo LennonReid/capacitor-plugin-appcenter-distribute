@@ -1,4 +1,4 @@
-package com.metro.plugins.distribute;
+package com.capacitorUnOfficial.plugins.distribute;
 
 import com.getcapacitor.NativePlugin;
 import com.getcapacitor.Plugin;

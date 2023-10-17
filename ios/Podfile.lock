@@ -1,11 +1,27 @@
 PODS:
-  - Capacitor (2.4.5):
+  - AppCenter (5.0.4):
+    - AppCenter/Analytics (= 5.0.4)
+    - AppCenter/Crashes (= 5.0.4)
+  - AppCenter/Analytics (5.0.4):
+    - AppCenter/Core
+  - AppCenter/Core (5.0.4)
+  - AppCenter/Crashes (5.0.4):
+    - AppCenter/Core
+  - AppCenter/Distribute (5.0.4):
+    - AppCenter/Core
+  - Capacitor (5.4.2):
     - CapacitorCordova
-  - CapacitorCordova (2.4.5)
+  - CapacitorCordova (5.4.2)
 
 DEPENDENCIES:
+  - AppCenter
+  - AppCenter/Distribute
   - "Capacitor (from `../node_modules/@capacitor/ios`)"
   - "CapacitorCordova (from `../node_modules/@capacitor/ios`)"
+
+SPEC REPOS:
+  trunk:
+    - AppCenter
 
 EXTERNAL SOURCES:
   Capacitor:
@@ -14,9 +30,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@capacitor/ios"
 
 SPEC CHECKSUMS:
-  Capacitor: 16fff19464a7d37e2f996e0994749b04111ed3f0
-  CapacitorCordova: 4f552a757626d236959fd79e970b6b6a26efb859
+  AppCenter: 85c92db0759d2792a65eb61d6842d2e86611a49a
+  Capacitor: 8a9db42d105f55843cd8ed2a3cb54e2b78e7f102
+  CapacitorCordova: cfcc06b698481da655415985eeb2b8da363f8451
 
-PODFILE CHECKSUM: e66d6fa04b0daaf06d8498d39637adf77139c716
+PODFILE CHECKSUM: 534bf404f005f895867587abef6a8d6b5d782cd0
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.12.1
